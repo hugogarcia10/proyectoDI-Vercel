@@ -1,0 +1,11 @@
+<p>listado works!</p>
+<button class="btn btn-primary" (click)="mostrar = !mostrar">Cambiar estilo</button>
+<!-- hacer un select con todas las categorias -->
+<!-- <select>
+  <option *ngFor="let item of categorias">{{item}}</option>
+</select> -->
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let item of listado">
+      <app-postcard [post]="item" [mostrar]="mostrar"></app-postcard>
+    </div>
+</div>
